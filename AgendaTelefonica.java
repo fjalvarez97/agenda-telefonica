@@ -7,29 +7,30 @@ import java.util.HashMap;
  */
 public class AgendaTelefonica
 {
-    // instance variables - replace the example below with your own
-
+    private HashMap<String, String> contactos;
     /**
      * Constructor for objects of class AgendaTelefonica
      */
     public AgendaTelefonica()
     {
-
+        contactos = new HashMap<>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Agrega contactos y su numero al HashMap.
      */
     public void enterNumber(String name, String number)
     {
-        
+        contactos.put(name, number);
     }
     
+    /**
+     * Encuentra el numero asignado al nombre que
+     * pasamos por parametro.
+     */
     public String lookupNumber(String name)
     {
-        return "";
+        String numero = contactos.get(name);
+        return numero;
     }
 }
